@@ -1,5 +1,3 @@
-import {Card} from "../Card/Card.jsx";
-
 export const Column = ({title, cards}) => {
     return (
         <div className="main__column">
