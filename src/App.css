@@ -3,6 +3,10 @@
   box-sizing: border-box;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 a,
 a:visited {
   text-decoration: none;
@@ -13,6 +17,10 @@ button,
 ._btn {
   cursor: pointer;
   outline: none;
+}
+
+h3 {
+  margin: 0;
 }
 
 p {
@@ -776,12 +784,11 @@ body {
   padding: 0;
 }
 .header__pop-user-set {
-  display: none;
+  display: block;
   position: absolute;
   top: 61px;
   right: 0;
   width: 213px;
-  height: 205px;
   border-radius: 10px;
   border: 0.7px solid rgba(148, 166, 190, 0.4);
   background: #FFF;

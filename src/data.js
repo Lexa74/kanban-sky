@@ -1,0 +1,58 @@
+export const tasks = [
+    {
+        id: 1,
+        date: '30.1.2023',
+        theme: "Web Design",
+        title: "Название задачи",
+        status: "Без статуса",
+    },
+    {
+        id: 9,
+        date: '30.1.2023',
+        theme: "Copywriting",
+        title: "Название задачи1",
+        status: "Без статуса",
+    },
+    {
+        id: 10,
+        date: '30.1.2023',
+        theme: "Web Design",
+        title: "Название задачи1",
+        status: "Без статуса",
+    },
+    {
+        id: 2,
+        date: '20.02.2023',
+        theme: "Research",
+        title: "Название задачи",
+        status: "Нужно сделать",
+    },
+    {
+        id: 3,
+        date: '1.10.2023',
+        theme: "Copywriting",
+        title: "Название задачи",
+        status: "В работе",
+    },
+    {
+        id: 4,
+        date: '30.01.2024',
+        theme: "Research",
+        title: "Название задачи",
+        status: "Тестирование",
+    },
+    {
+        id: 5,
+        date: '30.02.2024',
+        theme: "Copywriting",
+        title: "Название задачи",
+        status: "Готово",
+    },
+    {
+        id: 6,
+        date: '21.03.2024',
+        theme: "Research",
+        title: "Название задачи1",
+        status: "Нужно сделать",
+    },
+];

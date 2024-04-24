@@ -1,3 +1,5 @@
+import {Card} from "../Card/Card.jsx";
+
 export const Column = ({title, cards}) => {
     return (
         <div className="main__column">
@@ -5,7 +7,7 @@ export const Column = ({title, cards}) => {
                 <p>{title}</p>
             </div>
             <div className="cards">
-                {cards}
+                {cards.map(el => <Card title={el.title} key={el.id} theme={el.theme} date={el.date} />)}
             </div>
         </div>
     )
