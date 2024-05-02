@@ -6,10 +6,14 @@ import {PopBrowse} from "./components/Popups/PopBrowse/PopBrowse.jsx";
 import {PopUser} from "./components/Popups/PopUser/PopUser.jsx";
 import {useEffect, useState} from "react";
 import {tasks} from "./data.js";
+import {GlobalStyle, Wrapper} from "./globalStyle.styled.js";
+import {ThemeProvider} from "styled-components";
+import {darkTheme, lightTheme} from "./themeStyle.styled.js";
 
 function App() {
     const [cards, setCards] = useState(tasks)
     const [isLoading, setIsLoading] = useState(false)
+    const [globalTheme, setGlobalTheme] = useState(true)
 
     const addCard = (e) => {
         e.preventDefault()
@@ -28,17 +32,20 @@ function App() {
         setIsLoading(true)
         setTimeout(() => {
             setIsLoading(false)
-        }, 2000)
+        }, 0)
     }, [])
 
   return (
-        <div className="wrapper">
-            <PopUser/>
-            <PopNewCard/>
-            <PopBrowse/>
-            <Header addCard={addCard}/>
-            <Main isLoading={isLoading} cards={cards}/>
-        </div>
+      <ThemeProvider theme={globalTheme ? lightTheme : darkTheme}>
+          <GlobalStyle/>
+          <Wrapper>
+              <PopUser/>
+              <PopNewCard/>
+              <PopBrowse/>
+              <Header setGlobalTheme={setGlobalTheme} globalTheme={globalTheme} addCard={addCard}/>
+              <Main isLoading={isLoading} cards={cards}/>
+          </Wrapper>
+      </ThemeProvider>
   )
 }
 
